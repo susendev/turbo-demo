@@ -5,14 +5,24 @@
     "build": "turbo run build",
     "clean": "turbo run clean",
     "dev": "turbo run dev",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore",
     "lint": "turbo run lint",
     "test": "turbo run test",
+    "generate": "turbo run generate",
+    "db:migrate:deploy": "turbo run db:migrate:deploy",
+    "db:migrate:dev": "turbo run db:migrate:dev",
+    "db:push": "turbo run db:push",
+    "db:seed": "turbo run db:seed",
     "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
     "prettier": "^3.4.2",
-    "turbo": "^2.3.4"
+    "turbo": "^2.3.4",
+    "prisma": "latest",
+    "tsx": "4.19.1"
+  },
+  "dependencies": {
+    "@prisma/client": "latest"
   },
   "packageManager": "pnpm@8.15.6",
   "engines": {

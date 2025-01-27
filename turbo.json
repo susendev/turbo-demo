@@ -23,6 +23,23 @@
     "check-types": {
       "dependsOn": ["^build", "^check-types"]
     },
+    "generate": {
+      "dependsOn": ["^generate"],
+      "cache": false
+    },
+    "db:migrate:dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "db:migrate:deploy": {
+      "cache": false
+    },
+    "db:push": {
+      "cache": false
+    },
+    "db:seed": {
+      "cache": false
+    },
     "dev": {
       "dependsOn": ["^build"],
       "cache": false,
